@@ -4,12 +4,18 @@
 
 <h3> 
   
-  <a [title] = "product.name + 'details' "> <!-- aqui, ele esta pegando a variavel criada acima (product) e a variável (name) que está em products.ts -->
+  <a [title] = "product.nome + ' detalhes' "> <!-- aqui, ele esta pegando a variavel criada acima (product) e a variável (nome) que está em products.ts. Acho que o [title] é um vetor do tipo título-->
   
-  {{product.name}}  <!-- Esta interpolação, transforme os valores (product e name) e os traz para a view.Esta variável (name) está no arquivo product.ts-->
+  {{product.nome}}  <!-- Esta interpolação, transforme os valores (product e name) e os traz para a view.Esta variável (nome) está no arquivo product.ts-->
 
   </a>
 </h3>
+
+<p *ngIf="product.descricao">
+
+  Descrição: {{product.descricao}}
+
+</p>
 
 </div>
 <!-- 
