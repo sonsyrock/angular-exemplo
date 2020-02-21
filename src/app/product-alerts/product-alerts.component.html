@@ -1,6 +1,6 @@
 <p *ngIf="product.preco > 700"><!--a tag (p) está realizando a função ngIf, comparando se o preço produto for maior que 700 reais, vai exibir o botão da linha 3.-->
 
-  <button>
+  <button (click)="notify.emit()"><!--Recebendo a função notify.emit()-->
     Notificar
   </button>
 

@@ -21,7 +21,7 @@
   Compartilhar
 </button>
 
-<app-product-alerts [product]="product"> <!--Esta linha, está chamando o componente (app-product-alerts)-->
+<app-product-alerts [product]="product" (notify) = "onNotify()"> <!--Esta linha, está chamando o componente (app-product-alerts) juntamente com o metodo onNotify() que veio do componente product-list.component.ts-->
 
 </app-product-alerts>
 
