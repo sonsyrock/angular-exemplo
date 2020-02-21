@@ -1,8 +1,15 @@
 <h2>Produtos</h2>
 
-<div *ngFor = "let product of products"><!--Está divi recebe a propriedade Angular ngFor, dessa forma a cada novo elemento adicionado ou retirado desta div, ele ira criar uma nova ou retirar uma div-->
+<div *ngFor = "let product of products"><!--Está divi recebe a propriedade Angular ngFor, dessa forma a cada novo elemento adicionado ou retirado desta div, ele ira criar uma nova ou retirar uma div. Está criando uma nova variável chamada product e associando a product que esta no arquivo (product.ts) em typescript-->
 
-<h3> {{product.name}} </h3> <!-- Esta interpolação, transforme os valores (product e name) e os traz para a view.-->
+<h3> 
+  
+  <a [title] = "product.name + 'details' "> <!-- aqui, ele esta pegando a variavel criada acima (product) e a variável (name) que está em products.ts -->
+  
+  {{product.name}}  <!-- Esta interpolação, transforme os valores (product e name) e os traz para a view.Esta variável (name) está no arquivo product.ts-->
+
+  </a>
+</h3>
 
 </div>
 <!-- 
