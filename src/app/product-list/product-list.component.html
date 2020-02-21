@@ -7,7 +7,7 @@
 
 <h3> 
   
-  <a [title] = "product.nome + ' detalhes' " [routerLink]="['/products',productId]"> <!-- aqui, ele esta pegando a variavel criada acima (product) e a variável (nome) que está em products.ts. Acho que o [title] é um vetor do tipo título. Foi adicionado o routerLink para que quando clicarmos no nome do celular, ele abrirá uma nova página. Tecnicamente falando, o routerLink esta pegando os produtos pela identificação dos mesmos-->
+  <a [title] = "product.nome + ' detalhes' " [routerLink]="['/products',productId]"> <!-- aqui, ele esta pegando a variavel criada acima (product) e a variável (nome) que está em products.ts. Acho que o [title] é um vetor do tipo título. Foi adicionado o routerLink para que quando clicarmos no nome do celular, ele abrirá uma nova página. Tecnicamente falando, o routerLink esta pegando os produtos pela identificação dos mesmos. O router está localizado no arquivo (app.module.ts)-->
   
   {{product.nome}}  <!-- Esta interpolação, transforme os valores (product e nome) e os traz para a view.Esta variável (nome) está no arquivo product.ts-->
 
