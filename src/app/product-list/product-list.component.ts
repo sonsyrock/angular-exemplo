@@ -13,6 +13,7 @@ export class ProductListComponent {
   compartilhar() { //Método que exibi uma mensagem na tela quando é acionado no botão em product-list.component.html
     window.alert('O produto foi compartilhado!');
   }
+  
 }
 
 
