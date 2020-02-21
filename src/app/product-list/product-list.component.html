@@ -1,13 +1,13 @@
 <h2>Produtos</h2>
 
-<div *ngFor = "let product of products"><!--Está div recebe a propriedade Angular ngFor, dessa forma a cada novo elemento adicionado ou retirado desta div, ele ira criar uma nova ou retirar uma div. Está criando uma nova variável chamada product e associando a product a classe products em typescript-->
+<div *ngFor = "let product of products; index as productId"><!--Está div recebe a propriedade Angular ngFor, dessa forma a cada novo elemento adicionado ou retirado desta div, ele ira criar uma nova ou retirar uma div. Está criando uma nova variável chamada product e associando a product a classe products em typescript-->
 
 
 
 
 <h3> 
   
-  <a [title] = "product.nome + ' detalhes' "> <!-- aqui, ele esta pegando a variavel criada acima (product) e a variável (nome) que está em products.ts. Acho que o [title] é um vetor do tipo título-->
+  <a [title] = "product.nome + ' detalhes' " [routerLink]="['/products',productId]"> <!-- aqui, ele esta pegando a variavel criada acima (product) e a variável (nome) que está em products.ts. Acho que o [title] é um vetor do tipo título. Foi adicionado o routerLink para que quando clicarmos no nome do celular, ele abrirá uma nova página. Tecnicamente falando, o routerLink esta pegando os produtos pela identificação dos mesmos-->
   
   {{product.nome}}  <!-- Esta interpolação, transforme os valores (product e nome) e os traz para a view.Esta variável (nome) está no arquivo product.ts-->
 
